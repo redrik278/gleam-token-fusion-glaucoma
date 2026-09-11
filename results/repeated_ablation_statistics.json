@@ -1,0 +1,99 @@
+{
+  "resampling_unit": "GLEAM eye-level sample (public release has no patient-group mapping)",
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "bootstrap_replicates": 10000,
+  "variants": {
+    "gated_token": {
+      "macro_auc": 0.9359305555555555,
+      "accuracy": 0.8166666666666667,
+      "balanced_accuracy": 0.7458333333333333,
+      "macro_f1": 0.7611380637026017,
+      "qwk": 0.896124031007752,
+      "nll": 0.516912593914554,
+      "brier": 0.2783171151624727,
+      "ece": 0.02462964326805567,
+      "macro_auc_ci95": [
+        0.9126742542201725,
+        0.956343877741924
+      ]
+    },
+    "token_no_gates": {
+      "macro_auc": 0.938048611111111,
+      "accuracy": 0.8,
+      "balanced_accuracy": 0.7208333333333333,
+      "macro_f1": 0.7266591319653636,
+      "qwk": 0.8916030534351145,
+      "nll": 0.5054963279190896,
+      "brier": 0.27673213790273526,
+      "ece": 0.021667880477777693,
+      "macro_auc_ci95": [
+        0.9159964714216818,
+        0.9578002999956848
+      ]
+    },
+    "token_no_transformer": {
+      "macro_auc": 0.9275381944444445,
+      "accuracy": 0.7875,
+      "balanced_accuracy": 0.7145833333333333,
+      "macro_f1": 0.7264008593928079,
+      "qwk": 0.8850931677018634,
+      "nll": 0.5371789447835554,
+      "brier": 0.3000429052011153,
+      "ece": 0.03796489837222225,
+      "macro_auc_ci95": [
+        0.903672845155508,
+        0.9493120636634406
+      ]
+    },
+    "token_no_regularizers": {
+      "macro_auc": 0.9339618055555556,
+      "accuracy": 0.825,
+      "balanced_accuracy": 0.7749999999999999,
+      "macro_f1": 0.7845225616939636,
+      "qwk": 0.8985959438377535,
+      "nll": 0.5283507461173618,
+      "brier": 0.2751806668900646,
+      "ece": 0.03532875020972229,
+      "macro_auc_ci95": [
+        0.9087642813460262,
+        0.9562381388890617
+      ]
+    }
+  },
+  "paired_comparisons": {
+    "token_no_gates": {
+      "auc_delta_complete_minus_ablation": -0.0021180555555555536,
+      "auc_delta_ci95": [
+        -0.012196442828859127,
+        0.007724664322959133
+      ],
+      "complete_only_correct": 9,
+      "ablation_only_correct": 5,
+      "mcnemar_exact_p": 0.4239501953125
+    },
+    "token_no_transformer": {
+      "auc_delta_complete_minus_ablation": 0.008392361111110969,
+      "auc_delta_ci95": [
+        -0.004730869379507549,
+        0.022061295994012034
+      ],
+      "complete_only_correct": 15,
+      "ablation_only_correct": 8,
+      "mcnemar_exact_p": 0.21003961563110352
+    },
+    "token_no_regularizers": {
+      "auc_delta_complete_minus_ablation": 0.0019687499999998526,
+      "auc_delta_ci95": [
+        -0.010602434247228603,
+        0.01571340024444576
+      ],
+      "complete_only_correct": 6,
+      "ablation_only_correct": 8,
+      "mcnemar_exact_p": 0.79052734375
+    }
+  }
+}

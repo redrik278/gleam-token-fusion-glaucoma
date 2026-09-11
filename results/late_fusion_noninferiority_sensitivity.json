@@ -1,0 +1,19 @@
+{
+  "analysis": "post_hoc_noninferiority_sensitivity",
+  "comparator": "late_fusion",
+  "metric": "macro one-vs-rest AUC",
+  "margin": 0.02,
+  "estimate": 0.0067708333333332815,
+  "bootstrap_replicates": 10000,
+  "ci90": [
+    -0.0020594753200312674,
+    0.015584142479135109
+  ],
+  "ci95": [
+    -0.0038541460330143358,
+    0.017490726074876735
+  ],
+  "lower_ci95_exceeds_negative_margin": true,
+  "bootstrap_tail_probability_delta_le_negative_margin": 9.999000099990002e-05,
+  "interpretation": "Exploratory because the margin was selected after primary analyses; supports noninferiority at a 0.02 AUC margin but does not establish superiority."
+}

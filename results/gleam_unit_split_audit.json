@@ -1,0 +1,46 @@
+{
+  "audit_scope": "GLEAM public v3 release and final source article",
+  "released_record_unit": "eye-level multimodal sample",
+  "source_article_population": {
+    "eye_level_samples": 1200,
+    "patients": 841,
+    "laterality_counts_as_reported": {
+      "both_eyes": 482,
+      "OS": 249,
+      "OD": 233
+    },
+    "internal_consistency_note": "The reported laterality counts do not reconcile arithmetically with 1,200 samples from 841 patients; no patient mapping is released, so they cannot be independently corrected."
+  },
+  "official_split": {
+    "training": 720,
+    "validation": 240,
+    "test": 240
+  },
+  "split_method_from_source": "stratified random sampling at eye level (6:2:2)",
+  "patient_ids_available_in_public_release": false,
+  "can_reconstruct_patient_groups": false,
+  "risk": "Fellow eyes from a patient may occur in different partitions, creating inter-sample correlation and potentially optimistic performance. The source article states this limitation explicitly.",
+  "inference_correction": "All bootstrap confidence intervals in this project are eye-sample-level, not patient-level.",
+  "files": {
+    "training": {
+      "path": "split\\trainsetlabel.csv",
+      "sha256": "04876bcf865de521973b23c29117a2f25e8f0075024137ecc558d92cb7167ea8"
+    },
+    "validation": {
+      "path": "split\\valsetlabel.csv",
+      "sha256": "4865619d0d91a05e79ecb44f7c964d8be6b659f328df671712662989a3dd5c60"
+    },
+    "test": {
+      "path": "split\\testsetlabel.csv",
+      "sha256": "f6445e78cdd166b11ada48f600e7ae6e135e67ccea7f0762bfa175eb10900571"
+    }
+  },
+  "source_evidence": {
+    "article_doi": "10.1109/TMI.2026.3692814",
+    "source_tex_lines": {
+      "cohort": "337",
+      "split": "480-481",
+      "limitation": "809"
+    }
+  }
+}

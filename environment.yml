@@ -1,0 +1,20 @@
+name: gleam-token-fusion
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.13
+  - pip
+  - pip:
+      - torch==2.11.0
+      - torchvision==0.26.0
+      - numpy==2.4.0
+      - pandas==2.3.3
+      - pillow==11.3.0
+      - opencv-python==5.0.0.92
+      - scikit-learn==1.8.0
+      - matplotlib==3.10.8
+      - seaborn==0.13.2
+      - PyYAML==6.0.3
+      - tqdm==4.67.3

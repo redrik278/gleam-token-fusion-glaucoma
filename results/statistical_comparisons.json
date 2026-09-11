@@ -1,0 +1,73 @@
+{
+  "bootstrap_replicates": 5000,
+  "macro_auc": {
+    "early_fusion": {
+      "estimate": 0.9242326388888888,
+      "ci95": [
+        0.8996069394716165,
+        0.9459635828749474
+      ]
+    },
+    "late_fusion": {
+      "estimate": 0.9291597222222222,
+      "ci95": [
+        0.9054257376068381,
+        0.9500775565492515
+      ]
+    },
+    "gated_token": {
+      "estimate": 0.9359305555555555,
+      "ci95": [
+        0.9121902205005853,
+        0.9568860209457928
+      ]
+    },
+    "official_hamm": {
+      "estimate": 0.9042013888888889,
+      "ci95": [
+        0.8771516727524301,
+        0.9294521685612037
+      ]
+    }
+  },
+  "paired_delta_proposed_minus_comparator": {
+    "early_fusion": {
+      "estimate": 0.011697916666666641,
+      "ci95": [
+        -0.004384295738666938,
+        0.027548266810963427
+      ]
+    },
+    "late_fusion": {
+      "estimate": 0.0067708333333332815,
+      "ci95": [
+        -0.0036425577886519734,
+        0.01739295654975569
+      ]
+    },
+    "official_hamm": {
+      "estimate": 0.031729166666666586,
+      "ci95": [
+        0.018414720603111674,
+        0.045233761517357425
+      ]
+    }
+  },
+  "mcnemar_accuracy": {
+    "early_fusion": {
+      "proposed_only_correct": 20,
+      "comparator_only_correct": 10,
+      "exact_p": 0.09873714670538905
+    },
+    "late_fusion": {
+      "proposed_only_correct": 12,
+      "comparator_only_correct": 5,
+      "exact_p": 0.143463134765625
+    },
+    "official_hamm": {
+      "proposed_only_correct": 29,
+      "comparator_only_correct": 6,
+      "exact_p": 0.0001168418675661087
+    }
+  }
+}

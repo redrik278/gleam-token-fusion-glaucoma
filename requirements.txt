@@ -1,0 +1,13 @@
+numpy==2.4.0
+pandas==2.3.3
+pillow==11.3.0
+opencv-python==5.0.0.92
+scikit-learn==1.8.0
+matplotlib==3.10.8
+seaborn==0.13.2
+PyYAML==6.0.3
+tqdm==4.67.3
+streamlit==1.49.1
+torch==2.11.0
+torchvision==0.26.0
+rapidocr-onnxruntime==1.2.3

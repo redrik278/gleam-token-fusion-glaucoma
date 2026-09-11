@@ -1,0 +1,10 @@
+data/
+*.pt
+*.pth
+*.ckpt
+__pycache__/
+*.pyc
+.venv/
+output/private/
+local_*/
+*.log

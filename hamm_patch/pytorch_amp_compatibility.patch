@@ -1,0 +1,33 @@
+diff --git a/Model/HAMM.py b/Model/HAMM.py
+index 0537b82..df43cdd 100644
+--- a/Model/HAMM.py
++++ b/Model/HAMM.py
+@@ -113,7 +113,11 @@ class RelationalGATLayer(nn.Module):
+         # take node features for each edge (q: source node, k: target node)
+         # q: (B, E, H, Dh)  from source nodes
+         q = xh[:, src, :, :]                      # advanced indexing
+-        k = xh[:, dst, :, :] + self.edge_emb(edge_type).view(1, E, H, Dh)  # add edge embedding
++        # Keep the relation embedding in the activation dtype. Current PyTorch
++        # autocast otherwise promotes this sum to float32 and index_add_ fails
++        # when its destination is float16.
++        rel = self.edge_emb(edge_type).view(1, E, H, Dh).to(dtype=xh.dtype)
++        k = xh[:, dst, :, :] + rel  # add edge embedding
+ 
+         # attention logits: (B, E, H)
+         a_input = torch.cat([q, k], dim=-1)   # (B,E,H,2Dh)
+@@ -141,7 +145,7 @@ class RelationalGATLayer(nn.Module):
+         # accumulate messages into source nodes
+         # for efficiency use index_add_
+         # reshape msg to (B, E, H*Dh) then index_add across dim=1
+-        msg_reshaped = msg.view(B, E, H*Dh)
++        msg_reshaped = msg.view(B, E, H*Dh).to(dtype=xh.dtype)
+         # We need to add each msg to out[:, src, :, :] (which is shaped B,N,H,Dh)
+         # We'll accumulate into out_reshaped: (B,N,H*Dh)
+         out_reshaped = torch.zeros(B, N, H*Dh, device=x.device, dtype=x.dtype)
+@@ -446,4 +450,4 @@ class HAMM_pretrain(nn.Module):
+         if vis:
+             return inputs, masked_inputs, rec_or_inps
+         else:
+-            return recon_loss
+\ No newline at end of file
++            return recon_loss

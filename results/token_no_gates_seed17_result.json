@@ -1,0 +1,28 @@
+{
+  "model": "token_no_gates",
+  "seed": 17,
+  "best_epoch": 1,
+  "validation": {
+    "auc_macro_ovr": 0.9207361111111112,
+    "accuracy": 0.7666666666666667,
+    "balanced_accuracy": 0.7166666666666668,
+    "f1_macro": 0.723620136440971,
+    "quadratic_kappa": 0.8856682769726248,
+    "nll": 0.5775858759880066,
+    "brier_multiclass": 0.3220218865925284,
+    "ece10": 0.05202827130754786
+  },
+  "test": {
+    "auc_macro_ovr": 0.916875,
+    "accuracy": 0.7625,
+    "balanced_accuracy": 0.6937500000000001,
+    "f1_macro": 0.7080529215754477,
+    "quadratic_kappa": 0.8654781199351702,
+    "nll": 0.5896278023719788,
+    "brier_multiclass": 0.32144170075549333,
+    "ece10": 0.06567683853209016
+  },
+  "parameters": 35608403,
+  "peak_gpu_mb": 971.6474609375,
+  "training_seconds": 206.97861981391907
+}

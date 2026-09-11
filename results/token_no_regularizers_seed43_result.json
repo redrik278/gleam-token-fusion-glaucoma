@@ -1,0 +1,28 @@
+{
+  "model": "token_no_regularizers",
+  "seed": 43,
+  "best_epoch": 1,
+  "validation": {
+    "auc_macro_ovr": 0.9290729166666667,
+    "accuracy": 0.7875,
+    "balanced_accuracy": 0.7270833333333333,
+    "f1_macro": 0.722429172704126,
+    "quadratic_kappa": 0.8902439024390244,
+    "nll": 0.539193332195282,
+    "brier_multiclass": 0.3019399788248828,
+    "ece10": 0.04704802160461741
+  },
+  "test": {
+    "auc_macro_ovr": 0.9176874999999999,
+    "accuracy": 0.8041666666666667,
+    "balanced_accuracy": 0.7395833333333333,
+    "f1_macro": 0.7481175600534156,
+    "quadratic_kappa": 0.8827160493827161,
+    "nll": 0.5687171816825867,
+    "brier_multiclass": 0.3045960947139742,
+    "ece10": 0.04968512989580632
+  },
+  "parameters": 35608403,
+  "peak_gpu_mb": 975.95703125,
+  "training_seconds": 193.86047744750977
+}
