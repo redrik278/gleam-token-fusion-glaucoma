@@ -1,0 +1,30 @@
+{
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "bootstrap_replicates": 10000,
+  "paired": {
+    "gated_token_clinical_aug": {
+      "auc_delta_model_minus_original": 0.003010416666666682,
+      "auc_delta_ci95": [
+        -0.006526923002419904,
+        0.01272860974262266
+      ],
+      "model_only_correct": 5,
+      "original_only_correct": 7,
+      "mcnemar_exact_p": 0.7744140625
+    },
+    "ordinal_token": {
+      "auc_delta_model_minus_original": -0.010899305555555516,
+      "auc_delta_ci95": [
+        -0.022624784859061428,
+        0.0009637235525173246
+      ],
+      "model_only_correct": 8,
+      "original_only_correct": 45,
+      "mcnemar_exact_p": 2.3683513772354559e-07
+    }
+  }
+}

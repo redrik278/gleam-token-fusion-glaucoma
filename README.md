@@ -44,3 +44,16 @@ The HAMM comparison requires cloning upstream commit `78b48100f212c85cfda47840ea
 ## Archiving
 
 Public source repository: <https://github.com/redrik278/gleam-token-fusion-glaucoma>. A permanent archival DOI requires verified author metadata, a rights-holder-approved license, Zenodo integration, and a tagged release.
+
+## Additional reviewer-requested analyses
+
+The v1.1.0 analysis set adds modality-specific augmentation, a cumulative-link ordinal comparator, class-wise and macro AUPRC, stage-specific bootstrap intervals, early-versus-normal operating points, all dual/single missing-modality configurations, Grad-CAM summaries, and anatomical-region versus border perturbation.
+
+```powershell
+python scripts/train_gleam_additional.py
+python scripts/analyze_additional_models.py
+python scripts/analyze_clinical_robustness.py
+python scripts/create_review_figures.py
+```
+
+The primary three-seed gated checkpoints are retained locally because redistributing trained weights requires confirmation that the GLEAM data terms permit derivative model-weight distribution. Per-eye probabilities and all reported aggregate outputs are public in `results/`.
