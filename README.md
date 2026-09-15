@@ -69,3 +69,7 @@ python scripts/create_reviewer_figure.py
 ```
 
 `results/reviewer_baseline_comparisons.json` contains paired 5,000-resample AUC-difference intervals and separately labeled exact McNemar tests of correctness. The aggregate Bangladesh frozen-model sensitivity file contains no patient identifiers; local prediction-level files are not distributed.
+
+## Data and complexity figures
+
+`python scripts/create_data_complexity_figures.py` recreates the representative held-out input/output panel and performance-complexity radar chart. Radar efficiency axes use `minimum observed burden / model burden`; AUC and accuracy retain their observed 0–1 values. No aggregate radar score is calculated.
