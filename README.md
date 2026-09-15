@@ -73,3 +73,7 @@ python scripts/create_reviewer_figure.py
 ## Data and complexity figures
 
 `python scripts/create_data_complexity_figures.py` recreates the representative held-out input/output panel and performance-complexity radar chart. Radar efficiency axes use `minimum observed burden / model burden`; AUC and accuracy retain their observed 0–1 values. No aggregate radar score is calculated.
+
+## Patient-independent public stress tests (v1.3)
+
+The release includes a locked Harvard-GDP protocol and executable scripts for five-seed OCT, VF, late-fusion, and reliability-aware models on the official 600/400 patient split. Aggregate results and confidence intervals are under `results/external_stress_tests/`. It also includes frozen GLEAM SLO transfer evaluation on HYGD. Public source images are not redistributed; obtain Harvard-GDP and HYGD from their official repositories and comply with their licenses.

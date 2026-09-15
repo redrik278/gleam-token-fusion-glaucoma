@@ -1,0 +1,23 @@
+{
+  "harvard_patients": 1000,
+  "md_auc": 0.9999959473315205,
+  "md_lt_minus1_accuracy": 0.999,
+  "md_lt_minus1_errors": 1,
+  "hygd": {
+    "patients": 288,
+    "images": 747,
+    "positive_patients": 186,
+    "negative_patients": 102,
+    "auc": 0.5311511701454775,
+    "auprc": 0.6957516908299586,
+    "accuracy": 0.3715277777777778,
+    "balanced_accuracy": 0.5090132827324478,
+    "f1": 0.07179487179487179,
+    "sensitivity": 0.03763440860215054,
+    "specificity": 0.9803921568627451,
+    "auc_ci95": [
+      0.46306520104040577,
+      0.5990832245355352
+    ]
+  }
+}
