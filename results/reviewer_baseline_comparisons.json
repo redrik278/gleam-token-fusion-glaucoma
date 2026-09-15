@@ -1,0 +1,98 @@
+[
+  {
+    "model_a": "vf_oct",
+    "model_b": "vf",
+    "auc_delta_a_minus_b": -0.013642361111111168,
+    "auc_delta_ci95": [
+      -0.03281824517437251,
+      0.005660898718532783
+    ],
+    "mcnemar_correct_a_only": 11,
+    "mcnemar_correct_b_only": 17,
+    "mcnemar_p_correctness": 0.34492845088243484
+  },
+  {
+    "model_a": "vf_oct_slo",
+    "model_b": "vf_oct",
+    "auc_delta_a_minus_b": 0.020062500000000094,
+    "auc_delta_ci95": [
+      0.0034330263556513283,
+      0.03714132633309989
+    ],
+    "mcnemar_correct_a_only": 8,
+    "mcnemar_correct_b_only": 10,
+    "mcnemar_p_correctness": 0.8145294189453125
+  },
+  {
+    "model_a": "gated_token",
+    "model_b": "weighted_logits",
+    "auc_delta_a_minus_b": 0.012322916666666739,
+    "auc_delta_ci95": [
+      -0.0008007193173004105,
+      0.02505472447922489
+    ],
+    "mcnemar_correct_a_only": 16,
+    "mcnemar_correct_b_only": 5,
+    "mcnemar_p_correctness": 0.02660369873046875
+  },
+  {
+    "model_a": "gated_token",
+    "model_b": "attention_pool",
+    "auc_delta_a_minus_b": 0.013975694444444353,
+    "auc_delta_ci95": [
+      0.0015367122165552474,
+      0.027433409705136587
+    ],
+    "mcnemar_correct_a_only": 11,
+    "mcnemar_correct_b_only": 7,
+    "mcnemar_p_correctness": 0.480682373046875
+  },
+  {
+    "model_a": "gated_token",
+    "model_b": "mlp_matched",
+    "auc_delta_a_minus_b": 0.005704861111111126,
+    "auc_delta_ci95": [
+      -0.00581249092152298,
+      0.016541793472397832
+    ],
+    "mcnemar_correct_a_only": 14,
+    "mcnemar_correct_b_only": 7,
+    "mcnemar_p_correctness": 0.18924713134765625
+  },
+  {
+    "model_a": "gated_token",
+    "model_b": "token_no_gates",
+    "auc_delta_a_minus_b": -0.0021180555555555536,
+    "auc_delta_ci95": [
+      -0.012254092501781883,
+      0.007486346504612947
+    ],
+    "mcnemar_correct_a_only": 9,
+    "mcnemar_correct_b_only": 5,
+    "mcnemar_p_correctness": 0.4239501953125
+  },
+  {
+    "model_a": "gated_token",
+    "model_b": "token_no_aux",
+    "auc_delta_a_minus_b": 0.00782986111111117,
+    "auc_delta_ci95": [
+      -0.002642670183179049,
+      0.019003568775241047
+    ],
+    "mcnemar_correct_a_only": 13,
+    "mcnemar_correct_b_only": 3,
+    "mcnemar_p_correctness": 0.021270751953125
+  },
+  {
+    "model_a": "gated_token",
+    "model_b": "token_no_moddrop",
+    "auc_delta_a_minus_b": 0.01012499999999994,
+    "auc_delta_ci95": [
+      -0.004173131032374408,
+      0.024953376202756002
+    ],
+    "mcnemar_correct_a_only": 12,
+    "mcnemar_correct_b_only": 5,
+    "mcnemar_p_correctness": 0.143463134765625
+  }
+]

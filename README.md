@@ -57,3 +57,15 @@ python scripts/create_review_figures.py
 ```
 
 The primary three-seed gated checkpoints are retained locally because redistributing trained weights requires confirmation that the GLEAM data terms permit derivative model-weight distribution. Per-eye probabilities and all reported aggregate outputs are public in `results/`.
+
+## v1.2.0 reviewer-requested comparisons
+
+This revision adds independently trained VF, VF+OCT, and VF+OCT+SLO models; learned weighted-logit fusion; attention pooling; a parameter-comparable MLP; and separate auxiliary-supervision and modality-dropout ablations. All use seeds 17, 29, and 43 and the same validation-selected checkpoint protocol.
+
+```powershell
+python scripts/train_reviewer_baselines.py
+python scripts/analyze_reviewer_baselines.py
+python scripts/create_reviewer_figure.py
+```
+
+`results/reviewer_baseline_comparisons.json` contains paired 5,000-resample AUC-difference intervals and separately labeled exact McNemar tests of correctness. The aggregate Bangladesh frozen-model sensitivity file contains no patient identifiers; local prediction-level files are not distributed.

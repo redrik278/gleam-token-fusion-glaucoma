@@ -1,0 +1,12 @@
+{
+  "n_evaluable": 115,
+  "n_positive": 114,
+  "n_negative": 1,
+  "positive_sensitivity_argmax_any_glaucoma": 1.0,
+  "negative_specificity_argmax": 0.0,
+  "predicted_stage_counts": {
+    "2": 112,
+    "3": 3
+  },
+  "interpretation": "Direct frozen GLEAM ensemble domain-shift sensitivity analysis; incompatible visit-level binary endpoint and one negative preclude external validation."
+}
